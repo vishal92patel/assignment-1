@@ -1,0 +1,45 @@
+<mat-accordion class="accordion-wrapper" multi>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Ag-Grid Accordion
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="accordion-body-wrapper">
+            <ag-grid-angular style="width: 100%; height: 500px;" class="ag-theme-alpine" [rowData]="rowData"
+                [gridOptions]="gridOptions">
+            </ag-grid-angular>
+        </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Auto-Complete Accordion
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="accordion-body-wrapper">
+            <form class="autocomplete-form">
+                <mat-form-field class="autocomplete-field">
+                    <mat-label>Company</mat-label>
+                    <input type="text" placeholder="Select Company" matInput [formControl]="myControl"
+                        [matAutocomplete]="auto">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </form>
+        </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Date Picker Accordion
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="accordion-body-wrapper">
+            <b>Empty Card</b>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>

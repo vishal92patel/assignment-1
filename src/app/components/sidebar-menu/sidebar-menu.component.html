@@ -1,0 +1,16 @@
+<div class="sidebar-wrapper" [ngClass]="{'sidebar-expanded': isExpanded, 'sidebar-collapse': !isExpanded}">
+    <div class="toogle-btn-wrapper">
+        <mat-icon (click)="toggle()" *ngIf="!isExpanded">chevron_right</mat-icon>
+        <mat-icon (click)="toggle()" *ngIf="isExpanded">chevron_left</mat-icon>
+    </div>
+    <div class="sidebar-menu-wrapper">
+        <div class="menu" *ngFor="let menu of menus;" [ngClass]="{'selected': menu.isSelected}" (click)="onMenuClick(menu)">
+            <div class="menu-icon">
+                <mat-icon>{{menu.icon}}</mat-icon>
+            </div>
+            <div class="menu-label">
+                {{menu.lable}}
+            </div>
+        </div>
+    </div>
+</div>

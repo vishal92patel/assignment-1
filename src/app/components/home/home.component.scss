@@ -1,0 +1,12 @@
+.main-container {
+    display: flex;
+    .left-container { 
+        position: absolute;
+        z-index: 1;
+    }
+    .right-container {
+        padding: 10px;
+        margin-left: 64px;
+        width: 100%;
+    }
+}

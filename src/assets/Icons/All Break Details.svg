@@ -1,0 +1,27 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+    <symbol id="Icon_All_Break_Details" data-name="Icon All Break Details" viewBox="0 0 51 37.56">
+      <g id="All_Break_Details" data-name="All Break Details">
+        <path id="Oval_1" data-name="Oval 1" class="cls-1"
+          d="M7.26,13A5.76,5.76,0,1,0,1.5,7.26,5.76,5.76,0,0,0,7.26,13Z" />
+        <path id="Shape_2" data-name="Shape 2" class="cls-1" d="M20.7,1.5H49.5" />
+        <path id="Shape_1" data-name="Shape 1" class="cls-1" d="M20.7,9.18H36.06" />
+        <path id="Oval_1-2" data-name="Oval 1" class="cls-1"
+          d="M7.26,36.06A5.76,5.76,0,1,0,1.5,30.3,5.76,5.76,0,0,0,7.26,36.06Z" />
+        <path id="Shape_2-2" data-name="Shape 2" class="cls-1" d="M20.7,24.54H49.5" />
+        <path id="Shape_1-2" data-name="Shape 1" class="cls-1" d="M20.7,32.22H36.06" />
+      </g>
+    </symbol>
+  </defs>
+  <use width="51" height="37.56" transform="translate(6.5 12.22)" xlink:href="#Icon_All_Break_Details" />
+</svg>

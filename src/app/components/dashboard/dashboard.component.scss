@@ -1,0 +1,29 @@
+.accordion-wrapper {
+    .accordion-body-wrapper {
+        color: #000;
+    }
+    .mat-expansion-panel {
+        background-color: #052950;
+        ::ng-deep .mat-expansion-panel-content {
+            background-color: #FFF !important;
+        }
+        ::ng-deep .mat-expansion-panel-body {
+            padding: 0;
+        }
+        ::ng-deep .mat-expansion-panel-header-title {
+            color: #FFF;
+        }
+        ::ng-deep .mat-expansion-indicator::after {
+            color: #FFF;
+        }
+    }
+}
+
+.autocomplete-form {
+    width: 300px;
+    padding-left: 25px;
+    margin-top: 25px;
+}
+.autocomplete-field {
+    width: 100%;
+}

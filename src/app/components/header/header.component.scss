@@ -1,0 +1,30 @@
+.header-wrapper {
+    height: 73px;
+    width: 100%;
+    background-image: linear-gradient(to right, #052950 30%, #094B68 80%, #107E8A 100%);
+    display: flex;
+    .header-left {
+        flex-grow: 10;
+        .header-logo {
+            img {
+                vertical-align: middle;
+                height: 73px;
+            }
+        }
+    }
+    .header-right {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        font-size: 18px;
+        .settings {
+            padding: 0 20px;
+        }
+        .divider{
+            padding: 0 20px 4px 40px;
+            font-size: 30px;
+        }
+    }
+}

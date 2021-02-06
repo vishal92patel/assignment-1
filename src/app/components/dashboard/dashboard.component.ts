@@ -778,8 +778,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         );
         this.selectedDate = { startDate: moment(), endDate: moment() };
         this.locale = {
-            format: 'MM/DD/YYYY', // could be 'YYYY-MM-DDTHH:mm:ss.SSSSZ'
-            displayFormat: 'MM/DD/YYYY', // default is format value
+            format: 'DD-MMM-YYYY', // could be 'YYYY-MM-DDTHH:mm:ss.SSSSZ'
+            displayFormat: 'DD-MMM-YYYY', // default is format value
             direction: 'ltr', // could be rtl
             weekLabel: 'W',
             separator: ' - ', // default is ' - '

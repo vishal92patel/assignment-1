@@ -17,6 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 
 @NgModule({
     declarations: [
@@ -39,12 +40,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         MatFormFieldModule,
         MatAutocompleteModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgxDaterangepickerMd.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {
-    constructor() {
-    }
+    constructor() {}
 }

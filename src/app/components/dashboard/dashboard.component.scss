@@ -27,3 +27,10 @@
 .autocomplete-field {
     width: 100%;
 }
+.date-range-wrapper {
+    height: 350px;
+    padding: 20px;
+}
+::ng-deep .md-drppicker {
+    width: max-content !important;
+}

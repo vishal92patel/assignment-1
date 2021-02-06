@@ -4,6 +4,7 @@ import { GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import * as moment from "moment";
 
 @Component({
     selector: 'app-dashboard',
@@ -764,6 +765,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         "Adjudicator Fund LP",
     ];
     filteredOptions: Observable<string[]>;
+
+    selectedDate;
+    locale;
+    ranges
     constructor() { }
 
     ngOnInit(): void {
@@ -771,6 +776,29 @@ export class DashboardComponent implements OnInit, AfterViewInit {
             startWith(''),
             map(value => this.filter(value))
         );
+        this.selectedDate = { startDate: moment(), endDate: moment() };
+        this.locale = {
+            format: 'MM/DD/YYYY', // could be 'YYYY-MM-DDTHH:mm:ss.SSSSZ'
+            displayFormat: 'MM/DD/YYYY', // default is format value
+            direction: 'ltr', // could be rtl
+            weekLabel: 'W',
+            separator: ' - ', // default is ' - '
+            cancelLabel: 'Cancel', // detault is 'Cancel'
+            applyLabel: 'Apply', // detault is 'Apply'
+            clearLabel: 'Clear', // detault is 'Clear'
+            customRangeLabel: 'Custom range',
+            daysOfWeek: moment.weekdaysMin(),
+            monthNames: moment.monthsShort(),
+            firstDay: 1 // first day is monday
+        }
+        this.ranges = {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
     }
     onGridReady(obj: GridReadyEvent) {
         this.api = obj.api;

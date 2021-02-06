@@ -18,6 +18,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -41,11 +43,13 @@ import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
         MatAutocompleteModule,
         FormsModule,
         ReactiveFormsModule,
-        NgxDaterangepickerMd.forRoot()
+        MatButtonModule,
+        NgxDaterangepickerMd.forRoot(),
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {
-    constructor() {}
+    constructor() { }
 }

@@ -5,7 +5,10 @@
         </div>
     </div>
     <div class="header-right">
-        <div class="username">Welcome Username</div>
+        <div class="username">
+            <span *ngIf="!userInfo.userName"> Login </span>
+            <span *ngIf="userInfo.userName"> Welcome {{userInfo?.userName}} </span>
+        </div>
         <div class="divider"> | </div>
         <div class="settings">
             <mat-icon>settings</mat-icon>
